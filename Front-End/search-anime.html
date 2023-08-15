@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" />
+    <style>
+      .navigation {
+        margin-bottom: 5rem;
+      }
+
+      .user-frame {
+        font-size: 2.5rem;
+      }
+    </style>
+    <script defer src="search-anime.js" type="module"></script>
+  </head>
+  <body>
+    <nav class="navigation">
+      <div class="logo">
+        <a href="index.html"><img src="img/nani-logo.png" alt="nani-logo" /></a>
+        <span>Nani Anime</span>
+      </div>
+      <!-- <div class="btn-menu">
+        <img src="img/menu-button-of-three-horizontal-lines.png" />
+      </div> -->
+      <ul class="navigation-sections">
+        <!-- <li class="user-frame">login</li> -->
+        <div class="user-profile hidden">
+          <img
+            src="img/profile-pics/image-1.jfif"
+            alt="User Profile Picture"
+            class="profile-picture"
+            onclick="toggleProfileOptions()"
+          />
+          <div class="profile-options" id="profileOptions">
+            <a href="new-user-portal.html" class="dashboard-link">Profile</a>
+            <a href="#" class="logout-link">Log out</a>
+          </div>
+        </div>
+      </ul>
+    </nav>
+    <main class="main container">
+      <section class="section search-anime-show" data-sec="1">
+        <h2>Search Animes</h2>
+        <div class="search-anime-2">
+          <input
+            type="text"
+            class="input-anime"
+            placeholder="Search anime..."
+          />
+          <button class="btn-search">Search</button>
+        </div>
+        <div class="pre-loader"></div>
+        <div class="show-error"><p></p></div>
+        <div class="search-results">
+          <!-- <div class="item">
+            <img src="img/anime-1.jpg"/>
+          <div class="anime-data">
+            <p class="anime-title">Bleach</p>
+            <p class="anime-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, quod dolorum odio necessitatibus error possimus voluptatibus fugit ex rerum numquam porro sapiente dolore, fugiat eum laborum harum nulla pariatur facere?</p>
+          </div>
+          </div>  -->
+        </div>
+        <div class="pagination">
+          <!-- <button class="btn-pagination previous">Previous</button>
+          <button class="btn-pagination next">Next</button>   -->
+          <!-- <div class="button" data-animeId = 1><p>1</p></div>
+          <div class="button"><p>2</p></div> -->
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

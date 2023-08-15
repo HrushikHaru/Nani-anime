@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link href="style.css" rel="stylesheet" />
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script defer src="script.js" type="module"></script>
+    <script defer src="sign-up.js" type="module"></script>
+    <script defer src="main-page.js" type="module"></script>
+    <title>Anime</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navigation">
+        <div class="logo">
+          <img src="img/nani-logo.png" alt="nani-logo" />
+          <span>Nani Anime</span>
+        </div>
+        <div class="btn-menu">
+          <img src="img/menu-button-of-three-horizontal-lines.png" />
+        </div>
+        <ul class="navigation-sections">
+          <li class="section-nav" data-secselect = 0>Top-Animes</li>
+          <li class="section-nav" data-secselect = 1>Anime-season</li>
+          <li class="user-frame">login</li>
+          <div class="user-profile hidden">
+            <img
+              src="img/profile-pics/image-1.jfif"
+              alt="User Profile Picture"
+              class="profile-picture"
+              onclick="toggleProfileOptions()"
+            />
+            <div class="profile-options" id="profileOptions">
+              <a href="new-user-portal.html" class="dashboard-link">Profile</a>
+              <a href="#" class="logout-link">Log out</a>
+            </div>
+          </div>
+        </ul>
+        
+      </nav>
+
+      <div class="container">
+        <div class="hero-section">
+          <div class="header-hero">
+            <h1>Nani Anime</h1>
+            <p>The only place that you need to be at</p>
+            <div class="search">
+            <input class="search-anime" placeholder="Search anime..."/><a id="search-link" href="search-anime.html"><img src="img/search-icon.png" alt="search-image" class="search-icon-anime"/></a>
+            </div>
+          </div>
+          <div class="hero-img-container">
+            <picture>
+              <source
+                media="(max-width: 45rem)"
+                srcset="img/solo.jpg"
+                alt="anime collage pic"
+              />
+              <!-- <source
+              media="(max-width: 52rem)"
+              srcset="img/Hero-img-small.jpg"
+              alt="anime collage pic"
+            /> -->
+              <source
+                media="(max-width: 52rem)"
+                srcset="img/Hero-img-small.jpg"
+                alt="anime collage pic"
+              />
+              <img src="img/Hero-img-perf.jpg" alt="anime collage pic" />
+            </picture>
+          </div>
+        </div>
+        <div class="registration">
+          <div class="registration-buttons">
+            <button class="btn login">Login</button>
+            <button class="btn signup">Signup</button>
+          </div>
+          <div class="visitors">
+            <div class="visitors-imgs">
+              <img src="img/customers/customer-1.jpg" alt="Customer photo" />
+              <img src="img/customers/customer-2.jpg" alt="Customer photo" />
+              <img src="img/customers/customer-3.jpg" alt="Customer photo" />
+              <img src="img/customers/customer-4.jpg" alt="Customer photo" />
+              <img src="img/customers/customer-5.jpg" alt="Customer photo" />
+              <img src="img/customers/customer-6.jpg" alt="Customer photo" />
+            </div>
+            <p class="visitors-text">
+              <span>50,000+</span> regular visitors!
+            </p>
+      </div>
+    </header>
+
+    <aside class="login-signup-registration">
+      <section class="login-window hidden">
+        <div class="login-window-content">
+          <p class="login-up">Login to get started</p>
+          <button class="modal-login-close">&times;</button>
+        </div>
+        <p class="err-message"></p>
+        <p class="success-message"></p>
+        <form class="login-form" id="login" method="post" action="index.html">
+          <p><label for="Username">Username</label></p>
+          <input
+            type="text"
+            name="Password"
+            placeholder="Username"
+            class="username"
+          />
+          <p><label for="Password">Password</label></p>
+          <input
+            type="password"
+            name="Password"
+            placeholder="Password"
+            class="password"
+          />
+            <button class="login-btn" type="submit">Login</button>
+        </form>
+        <span class="or-span">Or</span>
+        <button class="signUp-btn">Sign-up as new user</button>
+      </section>
+
+      <section class="register-new-user hidden">
+        <div class="registration-setup">
+          <p class="register-header">New User Portal</p>
+          <button class="modal-registration-close">&times;</button>
+        </div>
+       
+        <p class="register-header">Please fill all the details below!</p>
+        <form class="login-form" id="sign-up" method="post" action="index.html">
+          <p>
+            <label for="First-Name">First-Name</label>
+          </p>
+          <input
+            type="text"
+            name="First-Name"
+            placeholder="First name..."
+            class="first-name"
+          />
+          <p>
+            <label for="last-Name">last-Name</label>
+          </p>
+          <input
+            type="text"
+            name="last-Name"
+            placeholder="Last name..."
+            class="last-name"
+          />
+          <p>
+            <label for="Date-of-birth">Date of birth</label
+            ><span class="date-message"
+              >(In the format specified, Example: 01MAR2023)</span
+            >
+            <p class="lengthValidationChecker date hidden"></p>
+          </p>
+          <input
+            type="text"
+            name="Date-of-birth"
+            placeholder="DDMMMYYYY"
+            class="date-of-birth"
+          />
+          <p>
+            <label for="age">Age</label>
+          </p>
+          <input type="number" name="age" placeholder="XX" class="age" readonly />
+          <p class="label-username">
+            <label for="User-Name">User-Name</label>
+            <p class="lengthValidationChecker username hidden"></p>
+          </p>
+          <input
+            type="text"
+            name="User-Name"
+            placeholder="XXXX@fam.com"
+            class="user-name"
+          />
+          <p class="password-box">
+            <label for="Set-Password">Password</label
+            ><img class="password-show" src="eye.png" />
+            <span class="pass-desc"
+              >(The password must contain at least 8 characters, which should
+              contain at least 1 special character and 1 number character)</span
+            >
+          </p>
+          <input
+            type="password"
+            name="Set-Password"
+            placeholder="Password..."
+            class="register-password"
+          />
+          <p class="password-box">
+            <label for="Confirm-Password">Confirm password</label
+            ><img class="password-show-confirm" src="eye.png" />
+          </p>
+          <input
+            type="password"
+            name="Confirm-Password"
+            placeholder="Confirm password..."
+            class="confirm-password"
+          />
+          <button class="register-btn" type="submit">Register!</button>
+        </form>
+      </section>
+
+      <section class="modal hidden">
+        <div class="err-desc">
+          <img src="error.webp" />
+          <p class="validation">Validation Error</p>
+          <button class="modalClose">&times;</button>
+        </div>
+        <div>
+          <p class="validation-desc">Error message</p>
+        </div>
+      </section>
+
+      <div class="overlay hidden"></div>
+    </aside>
+
+    
+
+    <main class="main container">
+      <section class="section main-stream-animes" data-sec = 1>
+        <h2>Top 10 Animes</h2>
+        <div class="pre-loader"></div>
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides <a href="anime.html?animeId=${anime.mal_id}"></a>-->
+            <!-- <div class="swiper-slide" data-id="123">
+              <div class="img-box">
+              <img src="img/anime-1.jpg" class="swiper-img"/>
+              </div>
+              <div class="anime-desc">
+                <p class="rank">1</p>
+                <p class="title">Bleach</p>
+                <p class="episodes">Episodes : 64</p>
+                <p class="status">Status : Finished-airing</p>
+                <p class="synopsis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione laboriosam facere eos dicta nobis reiciendis pariatur, inventore deleniti. Consequuntur quasi, deserunt sit debitis ratione in natus eum dolorem possimus vero.</p>
+              </div>
+            </div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div> -->
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+        
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </section>
+
+      <section class="section anime-genres" data-sec = 1>
+        <h2>Animes Based on Seasons</h2>
+        <div class="pre-loader-2"></div>
+        <div class="show-error"><p></p></div>
+        <div class="search-results search-grid">
+          <!-- <div class="item">
+            <img src="img/anime-1.jpg"/>
+          <div class="anime-data">
+            <p class="anime-title">Bleach</p>
+            <p class="anime-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, quod dolorum odio necessitatibus error possimus voluptatibus fugit ex rerum numquam porro sapiente dolore, fugiat eum laborum harum nulla pariatur facere?</p>
+          </div>
+          </div>  -->
+        </div>
+        <div class="pagination">
+          <!-- <button class="btn-pagination previous">Previous</button>
+          <button class="btn-pagination next">Next</button>   -->
+          <!-- <div class="button" data-animeId = 1><p>1</p></div>
+          <div class="button"><p>2</p></div> -->
+        </div>
+      </section>
+    </main>
+    
+    <footer class="footer">&copy;<span id="year">2023</span><span> Nani-Anime. All rights reserved.</span></footer>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="new-user-portal.css" rel="stylesheet" />
+    <script defer src="new-user-portal.js" type="module"></script>
+  </head>
+  <body>
+    <main class="layout">
+      <h1>Welcome to your profile</h1>
+      <div class="container">
+        <div class="sections">
+          <div class="section user-profile">
+            <h2>User Profile</h2>
+          </div>
+          <div class="section watch-list">
+            <h2>Watch List</h2>
+          </div>
+        </div>
+        <a href="index.html" class="home-page"
+          ><div class="section">
+            <h2>HomePage</h2>
+          </div></a
+        >
+      </div>
+      <section class="form hidden">
+        <h1>Update Your Profile</h2>
+        <form class="update-form">
+          <div>
+            <label>First-Name</label>
+            <input
+              type="text"
+              placeholder="first-Name"
+              class="first-Name"
+              required
+            />
+          </div>
+          <div>
+            <label>Last-Name</label>
+            <input
+              type="text"
+              placeholder="last-Name"
+              class="last-Name"
+              required
+            />
+          </div>
+          <div>
+            <label>User-Name</label>
+            <p class="update-info">
+              (The username should be in the format XXXX@fam.com and should
+              contain 12 characters including domain.)
+            </p>
+            <input type="text" placeholder="user-name" class="user-name" />
+          </div>
+          <div>
+            <label></label>
+          </div>
+          <button class="password-button">
+            <img class="password-img" src="img/password.png" />
+            <p>Change Password</p>
+          </button>
+          <div id="password-form" class="password-form">
+            <div>
+              <label>New Password</label>
+              <input
+                type="password"
+                placeholder="New Password"
+                class="password"
+              />
+            </div>
+            <div>
+              <label>Confirm Password</label>
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                class="confirm-password"
+              />
+            </div>
+          </div>
+
+          <button class="btn btnForm" type="submit">Submit</button>
+        </form>
+      </section>
+      <div class="watchList">
+        <div class="search-anime-show">
+          <h1>Your watch-list</h2>
+          <div class="pre-loader"></div>
+          <div class="show-error"><p></p></div>
+          <div class="search-results">
+            <!-- <div class="item">
+              <img src="img/anime-1.jpg"/>
+            <div class="anime-data">
+              <p class="anime-title">Bleach</p>
+              <p class="anime-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, quod dolorum odio necessitatibus error possimus voluptatibus fugit ex rerum numquam porro sapiente dolore, fugiat eum laborum harum nulla pariatur facere?</p>
+            </div>
+            </div>  -->
+          </div>
+          <div class="pagination">
+            <!-- <button class="btn-pagination previous">Previous</button>
+            <button class="btn-pagination next">Next</button>   -->
+            <!-- <div class="button" data-animeId = 1><p>1</p></div>
+            <div class="button"><p>2</p></div> -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <aside>
+      <section class="modal hidden">
+        <div class="err-desc">
+          <img src="error.webp" class="error-img"/>
+          <p class="validation">Validation Error</p>
+          <button class="modalClose">&times;</button>
+        </div>
+        <div>
+          <p class="validation-desc">Error message</p>
+        </div>
+      </section>
+
+      <div class="overlay hidden"></div>
+    </aside>
+  </body>
+</html>
