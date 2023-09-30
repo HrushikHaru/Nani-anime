@@ -1,4 +1,3 @@
-# Nani-anime
 # Nani-Anime
 
 Nani-Anime is a web portal that allows users to browse and explore anime information. The project is built using Spring Boot for the backend and Vanilla JavaScript for the frontend, with JWT (JSON Web Token) authentication implemented using Spring Boot's security features. (Also integration of Jikan API)
